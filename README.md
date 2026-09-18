@@ -1,8 +1,8 @@
 # DIPT-EXP-11-IMPLEMENTATION-OF-HUFFMAN-CODING
 
-## Name : Sanjaykumar B
+## Name : Harish S
 
-## Reg no : 212224230242
+## Reg no : 212224240052
 
 ## Aim
 To implement Huffman coding to compress the data using Python.
