@@ -31,31 +31,28 @@ print the characters and its huffmancode.
 
 ``` Python
 
-input_string = "Hack Syndicate (SEC)"  # Example input string
-
+input_string = "Harish SEC"
 frequency = {}
 for char in input_string:
     if char in frequency:
         frequency[char] += 1
     else:
         frequency[char] = 1
-
 nodes = [[char, freq] for char, freq in frequency.items()]
-
 while len(nodes) > 1:
-   
+    # Sort nodes based on frequency
     nodes = sorted(nodes, key=lambda x: x[1])
 
     # Pick two smallest nodes
     left = nodes.pop(0)
     right = nodes.pop(0)
 
-    
+    # Create a new node with combined frequency
     new_node = [[left, right], left[1] + right[1]]
     nodes.append(new_node)
 
+# The final node is the Huffman tree
 huffman_tree = nodes[0]
-
 huffman_codes = {}
 
 def generate_codes(tree, code=""):
@@ -66,18 +63,18 @@ def generate_codes(tree, code=""):
         generate_codes(tree[0][1], code + "1")
 
 generate_codes(huffman_tree)
-
-print("Character | Hack Syndicate (SEC)")
+print("Character | Harish (SEC)")
 print("-------------------------")
 for char, code in huffman_codes.items():
     print(f"    {char}    |    {code}")
+
 
 ```
 ## Output:
 
 ### Print the characters and its huffmancode
 
-<img width="721" height="414" alt="image" src="https://github.com/user-attachments/assets/d662fded-b12b-4820-9754-07db3a86e2ca" />
+<img width="362" height="280" alt="image" src="https://github.com/user-attachments/assets/29022771-ed7f-4b38-8799-572339862b22" />
 
 
 
